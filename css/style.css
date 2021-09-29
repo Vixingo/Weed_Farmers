@@ -192,3 +192,89 @@ hr {
 .promo {
     margin-top: 100px;
 }
+
+.div_img1 img{
+    width: 100%;
+    margin-top: 150px;
+    border-radius: 16px;
+}
+
+.div_img img{
+    width: 100%;
+    border-radius: 16px;
+}
+
+.item_box h1{
+    font-size: 44px;
+    color: var(--main_color);
+}
+
+.item_box p{
+    font-size: 28px;
+    margin-top: 100px;
+    color: var(--main_color);
+}
+
+/* another */
+
+.another{
+    margin-top: 100px;
+}
+.ant_sec{
+    background-color: var(--main_color);
+    background-image: url(../img/bg.png);
+    border-radius: 16px;
+}
+.txt_box h1{
+    font-size: 60px;
+    color: #fff;
+    padding: 50px;
+}
+.weed_box img{
+    width: 100%;
+    border-radius: 16px;
+}
+.items{
+    margin-top: 100px;
+    padding: 20px;
+    color: #a9a9a9;
+}
+hr{
+    border: none;
+    border-top: 2px solid var(--sec_color);
+    height: 5px;
+}
+
+.accordion_sec{
+    margin-top: 100px;
+}
+.accordion_img img {
+	width: 100%;
+	border-radius: 16px;
+}
+
+/* lift */
+.lift{
+    margin-top: 100px;
+}
+.navbar-brand2 {
+	color: var(--main_color) !important;
+	font-weight: 700;
+	font-size: 26px;
+}
+.navbar-brand2 a{
+	text-decoration: none;
+}
+.content_div a{
+        color: var(--main_color);
+        text-decoration: none;
+        display: block;
+}
+.social i{
+    font-size: 25px;
+    padding: 5px;
+}
+.social i:hover{
+    color: var(--sec_color);
+    border: 1px solid var(--sec_color);
+}
