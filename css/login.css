@@ -9,70 +9,63 @@
     --sec_color: #e2bb53;
     --bg_color: #f5f0ea;
 }
-.main{
+.header{
     margin-bottom: 130px;
 }
-.img_box img{
-    width: 100%;
+.hero{
+    position: relative;
 }
-.img_box{
-	margin-top: 150px;
-}
-.text_box p{
-    color: var(--main_color);
-    font-weight: 600;
-    margin-top: 50px;
+.text_box{
+    position: absolute;
+    top: 50%;
+    left: 15%;
 }
 .text_box h1{
     color: var(--main_color);
-    margin-top: 40px;
 }
-.text_box ul{
-    margin-top: 20px;
-}
-.text_box ul li{
+.text_box p{
     color: #6F6F6F;
-    margin: 8px 0;
 }
-.signup_box h2{
+.content_box h1{
     color: var(--main_color);
 }
-.signup_box input{
-    padding: 10px;
+.content_box input {
+	padding: 10px;
 	border-radius: 20px;
 	background-color: #F5F0EA;
 	border: none;
+}
+input{
     margin-top: 10px;
     margin-bottom: 20px;
     width: 100%;
 }
-.signup_box input:focus-visible {
+input:focus-visible {
 	outline:none;
     border: 2px solid var(--sec_color);
 }
-.text_boxx a{   
+.custom_btn button{
+    width: 100%;
+    background-color: var(--main_color);
+    color: #fff;
+    padding: 10px 5px;
+    border: 1px solid var(--sec_color);
+    box-shadow: 0px 1px 3px 1px var(--sec_color);
+    font-weight: 600;
+}
+.pass a{
+    color: var(--main_color);
+    text-decoration: none;
+    font-size: 13px;
+}
+.account span{
+    font-size: 13px;
+}
+.account a{
+    font-size: 13px;
     text-decoration: none;
     color: var(--main_color);
 }
-.custom_btn button{
-    width: 100%;
-    margin: 10px 5px;
-    padding: 10px 5px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.3s;
-    font-weight: 600;
-    color: var(--main_color);
-    box-shadow: 0px 1px 3px 1px var(--main_color);
-    background-color: var(--sec_color);
-}
-.custom_btn button:hover {
-    background-color: transparent;
-    color: var(--main_color);
-    border: 1px solid var(--main_color);
-    transform: translateY(-6px);
-}
-
 .icon a{
     text-decoration: none;
 }
@@ -122,7 +115,6 @@
 	transform: translateY(-50%);
     left: 10px;
 }
-/* footer */
 .name h3{
     color: var(--main_color);
 }
@@ -176,6 +168,14 @@ ul{
 
 /* responsive */
 
+@media (max-width:991px) {
+    .text_box{
+     position: static;
+     text-align: center;
+     margin-top: 50px;
+    }
+    
+}
 @media (max-width:575px)  {
     .maindiv{
         display: inline !important;
