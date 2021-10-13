@@ -10,10 +10,7 @@
     --bg_color: #f5f0ea;
 }
 
-/* body {
-    background-image: url(../img/bg.png);
-} */
-/* header */
+
 .header {
     margin-top: 20px;
 }
@@ -52,7 +49,6 @@
     font-size: 18px;
     margin: 0 10px;
 }
-
 .log_in_btn:hover {
     color: var(--sec_color);
 }
