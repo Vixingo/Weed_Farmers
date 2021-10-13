@@ -95,11 +95,12 @@ hr {
     padding-left: 0;
 }
 
-.settings ul li {
+.settings ul li a{
     text-decoration: none;
     color: var(--main_color);
     position: relative;
     margin-bottom: 8px;
+    display: block;
 }
 .tab-btn{
     display: block;
@@ -116,6 +117,7 @@ hr {
     transition: height 0.2s;
 }
 .settings .active {
+    margin-bottom: 8px;
     color: var(--sec_color);
     font-weight: 500;
     border-left: 4px solid var(--sec_color);

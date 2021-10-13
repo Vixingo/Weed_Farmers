@@ -97,11 +97,12 @@ hr {
     padding-left: 0;
 }
 
-.settings ul li {
+.settings ul li a{
     text-decoration: none;
     color: var(--main_color);
     position: relative;
     margin-bottom: 8px;
+    display: block;
 }
 
 .settings ul li::after{
@@ -115,7 +116,7 @@ hr {
     background: var(--sec_color);
     transition: height 0.2s;
 }
-.settings .active {
+.settings .active  a{
     color: var(--sec_color);
     font-weight: 500;
     border-left: 4px solid var(--sec_color);

@@ -95,11 +95,12 @@ hr {
     padding-left: 0;
 }
 
-.settings ul li {
+.settings ul li  a{
     text-decoration: none;
     color: var(--main_color);
     position: relative;
     margin-bottom: 8px;
+    display: block;
 }
 .tab-btn{
     display: block;
@@ -120,6 +121,7 @@ hr {
     font-weight: 500;
     border-left: 4px solid var(--sec_color);
     padding-left: 8px;
+    margin-bottom: 8px;
 }
 .info_txt{
     font-size: 40px;
