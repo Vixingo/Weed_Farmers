@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Document</title>
+</head>
+<body>
+    <div id='map' style='width: 100%; height: 600px;'></div>
+   
+
+
+
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoidml4aW5nbyIsImEiOiJja3VwcmM2d2k0bzQ3MnBtYWswNTY3bXY5In0.BrPR933T6xOdgfLFnXH7tg';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-74.5, 40], // starting position
+zoom: 9 // starting zoom
+        });
+        
+
+        // Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+
+  
+map.on('load', () => {
+// Add an image to use as a custom marker
+map.loadImage(
+'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+(error, image) => {
+if (error) throw error;
+map.addImage('custom-marker', image);
+// Add a GeoJSON source with 2 points
+map.addSource('points', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+// feature for Mapbox DC
+'type': 'Feature',
+'geometry': {
+'type': 'Point',
+'coordinates': [
+-77.03238901390978, 38.913188059745586
+]
+},
+'properties': {
+'title': 'Mapbox DC'
+}
+},
+{
+// feature for Mapbox SF
+'type': 'Feature',
+'geometry': {
+'type': 'Point',
+'coordinates': [-122.414, 37.776]
+},
+'properties': {
+'title': 'Mapbox SF'
+}
+}
+]
+}
+});
+ 
+// Add a symbol layer
+map.addLayer({
+'id': 'points',
+'type': 'symbol',
+'source': 'points',
+'layout': {
+'icon-image': 'custom-marker',
+// get the title name from the source's "title" property
+'text-field': ['get', 'title'],
+'text-font': [
+'Open Sans Semibold',
+'Arial Unicode MS Bold'
+],
+'text-offset': [0, 1.25],
+'text-anchor': 'top'
+}
+});
+}
+);
+});
+
+
+        </script>
+</body>
+</html>
