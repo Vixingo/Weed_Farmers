@@ -71,7 +71,9 @@
 }
 hr {
     margin: 0.5rem 0;
-    /* color: var(--sec_color); */
+    border: none;
+	border-top: 2px solid var(--sec_color);
+	height: 5px;
 }
 .nav_items a{
     color: #6F6F6F;
@@ -244,9 +246,7 @@ textarea:focus{
 	font-size: 12px;
 	margin-right: 4px;
 }
-hr{
-    border: 1px solid #808080;
-}
+
 .copyrigt{
     display: flex;
 }
